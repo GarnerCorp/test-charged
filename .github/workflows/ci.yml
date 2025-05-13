@@ -7,6 +7,10 @@ on:
       - "project/*"
       - "*.sbt"
       - ".github/workflows/ci.yml"
+    types:
+      - "opened"
+      - "reopened"
+      - "synchronize"
   workflow_dispatch:
 
 jobs:
