@@ -62,6 +62,15 @@ jobs:
         shell: bash
         run: sbt ++"$SCALA_VERSION" test
 
+  build:
+    name: Build
+    needs:
+      - test
+    runs-on: ubuntu-latest
+    steps:
+      - name: CI Passed
+        run: echo CI Passed | tee -a "$GITHUB_STEP_SUMMARY"
+
   coverage:
     name: Code Coverage
     needs:
