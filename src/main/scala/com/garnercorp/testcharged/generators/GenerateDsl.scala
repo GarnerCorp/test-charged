@@ -11,7 +11,7 @@ trait GenerateDsl {
 
     def value: T = generator.sample match {
       case Some(value) => value
-      case None =>
+      case None        =>
         throw new IllegalArgumentException(GenerateDsl.GenerationFailureMessage)
     }
 
