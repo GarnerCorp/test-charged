@@ -69,4 +69,4 @@ Generate.alpha.huge       // Largest possible data generation.
 ## Releasing
 TestCharged uses the [sonatype SBT plugin](https://github.com/xerial/sbt-sonatype) to do releases to Maven Central.
 
-See [.github/workflows/publish.yml](.github/workflows/publish.yml) for steps on how to release a version
+See [.github/workflows/ci.yml](.github/workflows/ci.yml) for steps on how to release a version
