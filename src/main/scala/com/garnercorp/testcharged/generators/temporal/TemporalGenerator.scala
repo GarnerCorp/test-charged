@@ -14,8 +14,9 @@ trait TemporalGenerator[A <: Temporal] extends TemporalRanges {
   }
 
   def distancePast(implicit now: NowProvider): Gen[A] =
-    apply(min = _.typedMinus(DistantPast))
-  def past(implicit now: NowProvider): Gen[A] = apply(min = _.typedMinus(Past))
+    apply(min = _.typedMinus(DistantPast), max = _.typedMinus(Past))
+  def past(implicit now: NowProvider): Gen[A] =
+    apply(min = _.typedMinus(Past), max = _.typedMinus(Recent))
   def recent(implicit now: NowProvider): Gen[A] =
     apply(min = _.typedMinus(Recent))
 
@@ -24,9 +25,9 @@ trait TemporalGenerator[A <: Temporal] extends TemporalRanges {
 
   def soon(implicit now: NowProvider): Gen[A] = apply(max = _.typedPlus(Soon))
   def future(implicit now: NowProvider): Gen[A] =
-    apply(max = _.typedPlus(Future))
+    apply(min = _.typedPlus(Soon), max = _.typedPlus(Future))
   def distantFuture(implicit now: NowProvider): Gen[A] =
-    apply(max = _.typedPlus(DistantFuture))
+    apply(min = _.typedPlus(Future), max = _.typedPlus(DistantFuture))
 
   def apply(min: A => A = identity[A], max: A => A = identity[A])(implicit
       now: NowProvider

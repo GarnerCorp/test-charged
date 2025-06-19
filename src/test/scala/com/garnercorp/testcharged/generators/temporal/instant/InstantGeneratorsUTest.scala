@@ -22,10 +22,10 @@ class InstantGeneratorsUTest
     "Ensure LocalDate generation helpers generate within the defined presets"
   ) {
     forAll(InstantGenerators.distancePast) {
-      withinRange(CurrentInstant.minus(DistantPast), CurrentInstant)
+      withinRange(CurrentInstant.minus(DistantPast), CurrentInstant.minus(Past))
     }
     forAll(InstantGenerators.past) {
-      withinRange(CurrentInstant.minus(Past), CurrentInstant)
+      withinRange(CurrentInstant.minus(Past), CurrentInstant.minus(Recent))
     }
     forAll(InstantGenerators.recent) {
       withinRange(CurrentInstant.minus(Recent), CurrentInstant)
@@ -39,10 +39,10 @@ class InstantGeneratorsUTest
       withinRange(CurrentInstant, CurrentInstant.plus(Soon))
     }
     forAll(InstantGenerators.future) {
-      withinRange(CurrentInstant, CurrentInstant.plus(Future))
+      withinRange(CurrentInstant.plus(Soon), CurrentInstant.plus(Future))
     }
     forAll(InstantGenerators.distantFuture) {
-      withinRange(CurrentInstant, CurrentInstant.plus(DistantFuture))
+      withinRange(CurrentInstant.plus(Future), CurrentInstant.plus(DistantFuture))
     }
   }
 }

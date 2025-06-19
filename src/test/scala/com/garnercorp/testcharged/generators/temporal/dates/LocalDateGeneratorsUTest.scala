@@ -21,10 +21,10 @@ class LocalDateGeneratorsUTest
     "Ensure LocalDate generation helpers generate within the defined presets"
   ) {
     forAll(LocalDateGenerators.distancePast) {
-      withinRange(CurrentDate.minus(DistantPast), CurrentDate)
+      withinRange(CurrentDate.minus(DistantPast), CurrentDate.minus(Past))
     }
     forAll(LocalDateGenerators.past) {
-      withinRange(CurrentDate.minus(Past), CurrentDate)
+      withinRange(CurrentDate.minus(Past), CurrentDate.minus(Recent))
     }
     forAll(LocalDateGenerators.recent) {
       withinRange(CurrentDate.minus(Recent), CurrentDate)
@@ -38,10 +38,10 @@ class LocalDateGeneratorsUTest
       withinRange(CurrentDate, CurrentDate.plus(Soon))
     }
     forAll(LocalDateGenerators.future) {
-      withinRange(CurrentDate, CurrentDate.plus(Future))
+      withinRange(CurrentDate.plus(Soon), CurrentDate.plus(Future))
     }
     forAll(LocalDateGenerators.distantFuture) {
-      withinRange(CurrentDate, CurrentDate.plus(DistantFuture))
+      withinRange(CurrentDate.plus(Future), CurrentDate.plus(DistantFuture))
     }
   }
 }
