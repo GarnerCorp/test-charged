@@ -2,11 +2,6 @@ name: CI
 
 on:
   pull_request:
-    paths:
-      - "src/*"
-      - "project/*"
-      - "*.sbt"
-      - ".github/workflows/ci.yml"
     types:
       - "opened"
       - "reopened"
