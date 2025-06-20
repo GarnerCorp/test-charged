@@ -14,6 +14,8 @@ trait DateRanges extends TemporalRanges {
   private val FutureYears = 2
   private val DistantFutureYears = 5
 
+  private val OffsetDays = 1
+
   protected override val DistantPast: TemporalAmount =
     Period.ofYears(DistantPastYears)
   protected override val Past: TemporalAmount = Period.ofYears(PastYears)
@@ -23,4 +25,6 @@ trait DateRanges extends TemporalRanges {
   protected override val Future: TemporalAmount = Period.ofYears(FutureYears)
   protected override val DistantFuture: TemporalAmount =
     Period.ofYears(DistantFutureYears)
+
+  protected override val Offset: TemporalAmount = Period.ofDays(OffsetDays)
 }

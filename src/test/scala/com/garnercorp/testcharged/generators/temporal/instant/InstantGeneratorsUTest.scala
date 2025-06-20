@@ -21,7 +21,7 @@ class InstantGeneratorsUTest
   test(
     "Ensure LocalDate generation helpers generate within the defined presets"
   ) {
-    forAll(InstantGenerators.distancePast) {
+    forAll(InstantGenerators.distantPast) {
       withinRange(CurrentInstant.minus(DistantPast), CurrentInstant.minus(Past))
     }
     forAll(InstantGenerators.past) {

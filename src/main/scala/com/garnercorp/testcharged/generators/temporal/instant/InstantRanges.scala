@@ -1,8 +1,7 @@
 package com.garnercorp.testcharged.generators.temporal.instant
 
-import java.time.Period
+import java.time.{Duration, Period}
 import java.time.temporal.TemporalAmount
-
 import com.garnercorp.testcharged.generators.temporal.TemporalRanges
 
 trait InstantRanges extends TemporalRanges {
@@ -14,6 +13,8 @@ trait InstantRanges extends TemporalRanges {
   private val FutureDays = 120
   private val DistantFutureDays = 365
 
+  private val OffsetNanoSeconds = 1
+
   protected override val DistantPast: TemporalAmount =
     Period.ofDays(DistantPastDays)
   protected override val Past: TemporalAmount = Period.ofDays(PastDays)
@@ -23,4 +24,8 @@ trait InstantRanges extends TemporalRanges {
   protected override val Future: TemporalAmount = Period.ofDays(FutureDays)
   protected override val DistantFuture: TemporalAmount =
     Period.ofDays(DistantFutureDays)
+
+  protected override val Offset: TemporalAmount =
+    Duration.ofNanos(OffsetNanoSeconds)
+
 }

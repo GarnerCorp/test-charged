@@ -10,4 +10,6 @@ trait TemporalRanges {
   protected val Soon: TemporalAmount
   protected val Future: TemporalAmount
   protected val DistantFuture: TemporalAmount
+
+  protected val Offset: TemporalAmount
 }

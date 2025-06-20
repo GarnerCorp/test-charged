@@ -20,7 +20,7 @@ class ZonedDateTimeGeneratorsUTest
   test(
     "Ensure ZonedDateTime generation helpers generate within the defined presets"
   ) {
-    forAll(ZonedDateTimeGenerators.distancePast) {
+    forAll(ZonedDateTimeGenerators.distantPast) {
       withinRange(CurrentDateTime.minus(DistantPast), CurrentDateTime.minus(Past))
     }
     forAll(ZonedDateTimeGenerators.past) {

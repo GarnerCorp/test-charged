@@ -14,6 +14,8 @@ trait TimeRanges extends TemporalRanges {
   private val FutureMinutes = 60
   private val DistantFutureHours = 6
 
+  private val OffsetNanoSeconds = 1
+
   protected override val DistantPast: TemporalAmount =
     Duration.ofHours(DistantPastHours)
   protected override val Past: TemporalAmount = Duration.ofMinutes(PastMinutes)
@@ -25,4 +27,7 @@ trait TimeRanges extends TemporalRanges {
     Duration.ofMinutes(FutureMinutes)
   protected override val DistantFuture: TemporalAmount =
     Duration.ofHours(DistantFutureHours)
+
+  protected override val Offset: TemporalAmount =
+    Duration.ofNanos(OffsetNanoSeconds)
 }
