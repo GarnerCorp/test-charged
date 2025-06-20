@@ -52,15 +52,15 @@ The date scale based generators are:
 As discussed above the date scale based generators are measured in a scale of years (in the largest case).
 Below are the ranges of the Temporal API for date scale based generators:
 
-| Name           | Example Usage                                          |
-|----------------|--------------------------------------------------------|
-| Distant Past   | Between 2 years and 5 years in the past.               |
-| Past           | Between 30 days and 2 years in the past.               |
-| Recent         | Between now and 30 days in the past.                   |
-| Default        | Between 30 days in the future and 30 days in the past. |
-| Soon           | Between now and 30 days in the future.                 |
-| Future         | Between 30 days and 2 years in the future.             |
-| Distant Future | Between 2 years and 5 years in the future.             |
+| Name           | Example Usage                                                         |
+|----------------|-----------------------------------------------------------------------|
+| Distant Past   | Greater than 2 years and less than or equal to 5 years in the past.   |
+| Past           | Greater than 30 days and less than or equal to 2 years in the past.   |
+| Recent         | Less than now and less than or equal to 30 days in the past.          |
+| Default        | Between 30 days in the future and 30 days in the past.                |
+| Soon           | Greater than now and less than or equal to 30 days in the future.     |
+| Future         | Greater than 30 days and less than or equal to 2 years in the future. |
+| Distant Future | Greater than 2 years and less than or equal to 5 years in the future. |
 
 
 ### Time Scale Based Generators
@@ -77,15 +77,15 @@ The time scale based generators are:
 Time Scale generators are measured in a scale of hours (in the largest case).
 Below are the ranges of the Temporal API for time scale based generators:
 
-| Name           | Example Usage                                                |
-|----------------|--------------------------------------------------------------|
-| Distant Past   | Between 60 minutes and 6 hours in the past.                  |
-| Past           | Between 60 seconds and 60 minutes in the past.               |
-| Recent         | Between now and 60 seconds in the past.                      |
-| Default        | Between 60 seconds in the future and 60 seconds in the past. |
-| Soon           | Between now and 60 seconds in the future.                    |
-| Future         | Between 60 seconds and 60 minutes in the future.             |
-| Distant Future | Between 60 minutes and 6 hours in the future.                |
+| Name           | Example Usage                                                               |
+|----------------|-----------------------------------------------------------------------------|
+| Distant Past   | Greater than 60 minutes and less than or equal to 6 hours in the past.      |
+| Past           | Greater than 60 seconds and less than or equal to 60 minutes in the past.   |
+| Recent         | Less than now and less than or equal to 60 seconds in the past.             |
+| Default        | Between 60 seconds in the future and 60 seconds in the past.                |
+| Soon           | Greater than now and less than or equal to 60 seconds in the future.        |
+| Future         | Greater than 60 seconds and less than or equal to 60 minutes in the future. |
+| Distant Future | Greater than 60 minutes and less than or equal to 6 hours in the future.    |
 
 
 ### Instant Generator
@@ -103,15 +103,15 @@ The instant generator is below:
 The instant generator is unique in its Temporal API ranges.
 Below are the ranges for the instant generator:
 
-| Name           | Example Usage                                          |
-|----------------|--------------------------------------------------------|
-| Distant Past   | Between 120 days and 365 days in the past.             |
-| Past           | Between 30 days and 120 days in the past.              |
-| Recent         | Between now and 30 days in the past.                   |
-| Default        | Between 30 days in the future and 30 days in the past. |
-| Soon           | Between now and 30 days in the future.                 |
-| Future         | Between 30 days and 120 days in the future.            |
-| Distant Future | Between 120 days and 365 days in the future.           |
+| Name           | Example Usage                                                                |
+|----------------|------------------------------------------------------------------------------|
+| Distant Past   | Greater than 120 days and less than or equal to 365 days in the past.        |
+| Past           | Greater than 30 days and less than or equal to 120 days in the past.         |
+| Recent         | Less than now and less than or equal to 30 days in the past.                 |
+| Default        | Between 30 days in the future and less than or equal to 30 days in the past. |
+| Soon           | Greater than now and less than or equal to 30 days in the future.            |
+| Future         | Greater than 30 days and less than or equal to 120 days in the future.       |
+| Distant Future | Greater than 120 days and less than or equal to 365 days in the future.      |
 
 
 ## Now Provider
