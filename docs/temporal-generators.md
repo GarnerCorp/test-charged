@@ -9,15 +9,15 @@ The Temporal generators follow the Temporal API.
 This API has three possible subsets depending on the type of temporal value being generated but all follow the same naming structure.
 The Temporal API is as follows:
 
-| Name            | Example Usage                      |
-| --------------- | ---------------------------------- |
-| Distant Past    | `Generate.localDate.distantPast`   |
-| Past            | `Generate.localDate.past`          |
-| Recent          | `Generate.localDate.recent`        |
-| Default         | `Generate.localDate.default`       |
-| Soon            | `Generate.localDate.soon`          |
-| Future          | `Generate.localDate.future`        |
-| Distant Future  | `Generate.localDate.distantFuture` |
+| Name           | Example Usage                      |
+|----------------|------------------------------------|
+| Distant Past   | `Generate.localDate.distantPast`   |
+| Past           | `Generate.localDate.past`          |
+| Recent         | `Generate.localDate.recent`        |
+| Default        | `Generate.localDate.default`       |
+| Soon           | `Generate.localDate.soon`          |
+| Future         | `Generate.localDate.future`        |
+| Distant Future | `Generate.localDate.distantFuture` |
 
 <br>
 
@@ -41,26 +41,26 @@ There are three date scale based generators.
 These are temporal generators that include a date portion.
 The date scale based generators are:
 
-| Name            | Example Usage                    |
-| --------------- | -------------------------------- |
-| LocalDate       | `Generate.localDate.default`     |
-| LocalDateTime   | `Generate.localDateTime.default` |
-| ZonedDateTime   | `Generate.zonedDateTime.default` |
+| Name          | Example Usage                    |
+|---------------|----------------------------------|
+| LocalDate     | `Generate.localDate.default`     |
+| LocalDateTime | `Generate.localDateTime.default` |
+| ZonedDateTime | `Generate.zonedDateTime.default` |
 
 <br>
 
 As discussed above the date scale based generators are measured in a scale of years (in the largest case).
 Below are the ranges of the Temporal API for date scale based generators:
 
-| Name            | Example Usage                                          |
-| --------------- |--------------------------------------------------------|
-| Distant Past    | Between 2 years and 5 years in the past.               |
-| Past            | Between 30 days and 2 years in the past.               |
-| Recent          | Between now and 30 days in the past.                   |
-| Default         | Between 30 days in the future and 30 days in the past. |
-| Soon            | Between now and 30 days in the future.                 |
-| Future          | Between 30 days and 2 years in the future.             |
-| Distant Future  | Between 2 years and 5 years in the future.             |
+| Name           | Example Usage                                          |
+|----------------|--------------------------------------------------------|
+| Distant Past   | Between 2 years and 5 years in the past.               |
+| Past           | Between 30 days and 2 years in the past.               |
+| Recent         | Between now and 30 days in the past.                   |
+| Default        | Between 30 days in the future and 30 days in the past. |
+| Soon           | Between now and 30 days in the future.                 |
+| Future         | Between 30 days and 2 years in the future.             |
+| Distant Future | Between 2 years and 5 years in the future.             |
 
 
 ### Time Scale Based Generators
@@ -68,24 +68,24 @@ There is only one time scale based generator.
 These are temporal generators that include time but no date portion.
 The time scale based generators are:
 
-| Name            | Example Usage                    |
-| --------------- | -------------------------------- |
-| LocalTime       | `Generate.localTime.default`     |
+| Name      | Example Usage                |
+|-----------|------------------------------|
+| LocalTime | `Generate.localTime.default` |
 
 <br>
 
 Time Scale generators are measured in a scale of hours (in the largest case).
 Below are the ranges of the Temporal API for time scale based generators:
 
-| Name            | Example Usage                                                |
-| --------------- |--------------------------------------------------------------|
-| Distant Past    | Between 60 minutes and 6 hours in the past.                  |
-| Past            | Between 60 seconds and 60 minutes in the past.               |
-| Recent          | Between now and 60 seconds in the past.                      |
-| Default         | Between 60 seconds in the future and 60 seconds in the past. |
-| Soon            | Between now and 60 seconds in the future.                    |
-| Future          | Between 60 seconds and 60 minutes in the future.             |
-| Distant Future  | Between 60 minutes and 6 hours in the future.                |
+| Name           | Example Usage                                                |
+|----------------|--------------------------------------------------------------|
+| Distant Past   | Between 60 minutes and 6 hours in the past.                  |
+| Past           | Between 60 seconds and 60 minutes in the past.               |
+| Recent         | Between now and 60 seconds in the past.                      |
+| Default        | Between 60 seconds in the future and 60 seconds in the past. |
+| Soon           | Between now and 60 seconds in the future.                    |
+| Future         | Between 60 seconds and 60 minutes in the future.             |
+| Distant Future | Between 60 minutes and 6 hours in the future.                |
 
 
 ### Instant Generator
@@ -94,24 +94,24 @@ It is the generator which powers all other temporal generators in TestCharged.
 It does include both date and time but it is unique in the Java 8+ temporal values.
 The instant generator is below:
 
-| Name            | Example Usage                    |
-| --------------- | -------------------------------- |
-| Instant         | `Generate.instant.default`       |
+| Name    | Example Usage              |
+|---------|----------------------------|
+| Instant | `Generate.instant.default` |
 
 <br>
 
 The instant generator is unique in its Temporal API ranges.
 Below are the ranges for the instant generator:
 
-| Name            | Example Usage                                          |
-| --------------- |--------------------------------------------------------|
-| Distant Past    | Between 120 days and 365 days in the past.             |
-| Past            | Between 30 days and 120 days in the past.              |
-| Recent          | Between now and 30 days in the past.                   |
-| Default         | Between 30 days in the future and 30 days in the past. |
-| Soon            | Between now and 30 days in the future.                 |
-| Future          | Between 30 days and 120 days in the future.            |
-| Distant Future  | Between 120 days and 365 days in the future.           |
+| Name           | Example Usage                                          |
+|----------------|--------------------------------------------------------|
+| Distant Past   | Between 120 days and 365 days in the past.             |
+| Past           | Between 30 days and 120 days in the past.              |
+| Recent         | Between now and 30 days in the past.                   |
+| Default        | Between 30 days in the future and 30 days in the past. |
+| Soon           | Between now and 30 days in the future.                 |
+| Future         | Between 30 days and 120 days in the future.            |
+| Distant Future | Between 120 days and 365 days in the future.           |
 
 
 ## Now Provider

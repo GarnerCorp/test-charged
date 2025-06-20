@@ -12,7 +12,7 @@ Generate.int.default.default      // The generated value could be positive or ne
 Below are the provided basic numeric generators.
 
 | Name   | Description               | Code              |
-| ------ | ------------------------- | ----------------- |
+|--------|---------------------------|-------------------|
 | Short  | Generates short values.   | `Generate.short`  |
 | Int    | Generates integer values. | `Generate.int`    |
 | Long   | Generates long values.    | `Generate.long`   |
