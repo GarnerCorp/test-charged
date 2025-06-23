@@ -41,26 +41,26 @@ There are three date scale based generators.
 These are temporal generators that include a date portion.
 The date scale based generators are:
 
-| Name          | Example Usage                    |
-|---------------|----------------------------------|
-| LocalDate     | `Generate.localDate.default`     |
-| LocalDateTime | `Generate.localDateTime.default` |
-| ZonedDateTime | `Generate.zonedDateTime.default` |
+| Name            | Example Usage                    |
+|-----------------|----------------------------------|
+| `LocalDate`     | `Generate.localDate.default`     |
+| `LocalDateTime` | `Generate.localDateTime.default` |
+| `ZonedDateTime` | `Generate.zonedDateTime.default` |
 
 <br>
 
 As discussed above the date scale based generators are measured in a scale of years (in the largest case).
 Below are the ranges of the Temporal API for date scale based generators:
 
-| Name           | Example Usage                                                         |
-|----------------|-----------------------------------------------------------------------|
-| Distant Past   | Greater than 2 years and less than or equal to 5 years in the past.   |
-| Past           | Greater than 30 days and less than or equal to 2 years in the past.   |
-| Recent         | Less than now and less than or equal to 30 days in the past.          |
-| Default        | Between 30 days in the future and 30 days in the past.                |
-| Soon           | Greater than now and less than or equal to 30 days in the future.     |
-| Future         | Greater than 30 days and less than or equal to 2 years in the future. |
-| Distant Future | Greater than 2 years and less than or equal to 5 years in the future. |
+| Name            | Example Usage                                                           |
+|-----------------|-------------------------------------------------------------------------|
+| `distantFuture` | More than 2 years in the future and no more than 5 years in the future. |
+| `future`        | More than 30 days in the future and no more than 2 years in the future. |
+| `soon`          | After now and no more than 30 days in the future.                       |
+| `default`       | No more than 30 days ago and no more than 30 days in the future.        |
+| `recent`        | No more than 30 days ago and before now.                                |
+| `past`          | No more than 2 years ago and more than 30 days ago.                     |
+| `distantPast`   | No more than 5 years ago and more than 2 years ago.                     |
 
 
 ### Time Scale Based Generators
@@ -77,15 +77,15 @@ The time scale based generators are:
 Time Scale generators are measured in a scale of hours (in the largest case).
 Below are the ranges of the Temporal API for time scale based generators:
 
-| Name           | Example Usage                                                               |
-|----------------|-----------------------------------------------------------------------------|
-| Distant Past   | Greater than 60 minutes and less than or equal to 6 hours in the past.      |
-| Past           | Greater than 60 seconds and less than or equal to 60 minutes in the past.   |
-| Recent         | Less than now and less than or equal to 60 seconds in the past.             |
-| Default        | Between 60 seconds in the future and 60 seconds in the past.                |
-| Soon           | Greater than now and less than or equal to 60 seconds in the future.        |
-| Future         | Greater than 60 seconds and less than or equal to 60 minutes in the future. |
-| Distant Future | Greater than 60 minutes and less than or equal to 6 hours in the future.    |
+| Name            | Example Usage                                                                 |
+|-----------------|-------------------------------------------------------------------------------|
+| `distantFuture` | More than 60 minutes in the future and no more than 6 hours in the future.    |
+| `future`        | More than 60 seconds in the future and no more than 60 minutes in the future. |
+| `soon`          | After now and no more than 60 seconds in the future.                          |
+| `default`       | No more than 60 seconds ago and no more than 60 seconds in the future.        |
+| `recent`        | No more than 60 seconds ago and before now.                                   |
+| `past`          | No more than 60 minutes ago and more than 60 seconds ago.                     |
+| `distantPast`   | No more than 6 hours ago and more than 60 minutes ago.                        |
 
 
 ### Instant Generator
@@ -103,15 +103,15 @@ The instant generator is below:
 The instant generator is unique in its Temporal API ranges.
 Below are the ranges for the instant generator:
 
-| Name           | Example Usage                                                                |
-|----------------|------------------------------------------------------------------------------|
-| Distant Past   | Greater than 120 days and less than or equal to 365 days in the past.        |
-| Past           | Greater than 30 days and less than or equal to 120 days in the past.         |
-| Recent         | Less than now and less than or equal to 30 days in the past.                 |
-| Default        | Between 30 days in the future and less than or equal to 30 days in the past. |
-| Soon           | Greater than now and less than or equal to 30 days in the future.            |
-| Future         | Greater than 30 days and less than or equal to 120 days in the future.       |
-| Distant Future | Greater than 120 days and less than or equal to 365 days in the future.      |
+| Name            | Example Usage                                                             |
+|-----------------|---------------------------------------------------------------------------|
+| `distantFuture` | More than 120 days in the future and no more than 365 days in the future. |
+| `future`        | More than 30 days in the future and no more than 120 days in the future.  |
+| `soon`          | After now and no more than 30 days in the future.                         |
+| `default`       | No more than 30 days ago and no more than 30 days in the future.          |
+| `recent`        | No more than 30 days ago and before now.                                  |
+| `past`          | No more than 120 days ago and more than 30 days ago.                      |
+| `distantPast`   | No more than 365 days ago and more than 120 days ago.                     |
 
 
 ## Now Provider
