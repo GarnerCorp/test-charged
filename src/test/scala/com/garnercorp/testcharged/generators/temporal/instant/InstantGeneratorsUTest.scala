@@ -42,7 +42,10 @@ class InstantGeneratorsUTest
       withinRange(CurrentInstant.plus(Soon), CurrentInstant.plus(Future))
     }
     forAll(InstantGenerators.distantFuture) {
-      withinRange(CurrentInstant.plus(Future), CurrentInstant.plus(DistantFuture))
+      withinRange(
+        CurrentInstant.plus(Future),
+        CurrentInstant.plus(DistantFuture)
+      )
     }
   }
 }
