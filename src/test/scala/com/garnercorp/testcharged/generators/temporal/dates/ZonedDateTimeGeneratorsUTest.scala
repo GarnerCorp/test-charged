@@ -21,7 +21,10 @@ class ZonedDateTimeGeneratorsUTest
     "Ensure ZonedDateTime generation helpers generate within the defined presets"
   ) {
     forAll(ZonedDateTimeGenerators.distantPast) {
-      withinRange(CurrentDateTime.minus(DistantPast), CurrentDateTime.minus(Past))
+      withinRange(
+        CurrentDateTime.minus(DistantPast),
+        CurrentDateTime.minus(Past)
+      )
     }
     forAll(ZonedDateTimeGenerators.past) {
       withinRange(CurrentDateTime.minus(Past), CurrentDateTime.minus(Recent))
@@ -41,7 +44,10 @@ class ZonedDateTimeGeneratorsUTest
       withinRange(CurrentDateTime.plus(Soon), CurrentDateTime.plus(Future))
     }
     forAll(ZonedDateTimeGenerators.distantFuture) {
-      withinRange(CurrentDateTime.plus(Future), CurrentDateTime.plus(DistantFuture))
+      withinRange(
+        CurrentDateTime.plus(Future),
+        CurrentDateTime.plus(DistantFuture)
+      )
     }
   }
 }
