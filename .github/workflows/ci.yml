@@ -28,7 +28,7 @@ jobs:
           - ubuntu-latest
           - windows-latest
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 35
+    timeout-minutes: 10
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -60,6 +60,7 @@ jobs:
 
   build:
     name: Build
+    timeout-minutes: 2
     needs:
       - test
     runs-on: ubuntu-latest
@@ -69,6 +70,7 @@ jobs:
 
   coverage:
     name: Code Coverage
+    timeout-minutes: 10
     needs:
       - test
     permissions:
@@ -125,6 +127,7 @@ jobs:
 
   artifact:
     name: Upload JAR
+    timeout-minutes: 5
     needs:
       - test
     permissions:
@@ -188,6 +191,7 @@ jobs:
 
   maven-central:
     name: Maven Central
+    timeout-minutes: 35
     needs:
       - test
     permissions:
