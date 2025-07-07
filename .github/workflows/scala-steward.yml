@@ -12,6 +12,7 @@ jobs:
   scala-steward:
     runs-on: ubuntu-latest
     name: Scala Steward
+    timeout-minutes: 10
     if: github.event_name == 'workflow_dispatch' || vars.RUN_SCALA_STEWARD
     steps:
       - name: Scala Steward

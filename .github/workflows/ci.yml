@@ -28,6 +28,7 @@ jobs:
           - ubuntu-latest
           - windows-latest
     runs-on: ${{ matrix.os }}
+    timeout-minutes: 35
     steps:
       - name: Checkout
         uses: actions/checkout@v4
