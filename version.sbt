@@ -1,2 +1,2 @@
-ThisBuild / version := "1.0.0"
+ThisBuild / version := "1.0.1"
 ThisBuild / versionScheme := Some("semver-spec")
