@@ -35,9 +35,11 @@ inThisBuild(
   )
 )
 
-// Dependencies
+// Dependencies (intentionally spaced to avoid merge conflicts from GitHub auto-bump bots)
 val ScalacticVersion = "3.2.19"
+
 val ScalaCheckVersion = "1.18.1"
+
 val ScalaCheckPlusVersion = "3.2.19.0"
 
 libraryDependencies ++= Seq(

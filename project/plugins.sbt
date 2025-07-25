@@ -2,6 +2,8 @@ ThisBuild / libraryDependencySchemes ++= Seq(
   "org.scala-lang.modules" %% "scala-xml" % VersionScheme.Always
 )
 
+// Versions intentionally spaced to avoid merge conflicts from GitHub auto-bump bots
+
 // Formatting
 addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.5.5")
 
@@ -10,4 +12,5 @@ addSbtPlugin("org.scoverage" % "sbt-scoverage" % "2.3.1")
 
 // Deployment
 addSbtPlugin("com.github.sbt" % "sbt-pgp" % "2.3.1")
+
 addSbtPlugin("org.xerial.sbt" % "sbt-sonatype" % "3.12.2")
