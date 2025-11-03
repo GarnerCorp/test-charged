@@ -5,7 +5,7 @@ ThisBuild / libraryDependencySchemes ++= Seq(
 // Versions intentionally spaced to avoid merge conflicts from GitHub auto-bump bots
 
 // Formatting
-addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.5.5")
+addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.5.6")
 
 // Code Coverage
 addSbtPlugin("org.scoverage" % "sbt-scoverage" % "2.3.1")
