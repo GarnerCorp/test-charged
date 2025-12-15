@@ -120,7 +120,7 @@ jobs:
           find target/scala-*/*coverage-report -type f | zip /tmp/scoverage.zip -@
 
       - name: Upload coverage report
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: scoverage
           path: /tmp/scoverage.zip
@@ -180,7 +180,7 @@ jobs:
           echo "jar_path=$jar_path" >> $GITHUB_OUTPUT
 
       - name: Upload JAR artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         env:
           JAR_PATH: ${{ steps.find-jar-path.outputs.jar_path }}
           SCALA_VERSION: ${{ matrix.scala-version }}
