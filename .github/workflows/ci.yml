@@ -20,6 +20,7 @@ jobs:
           - 11
           - 17
           - 21
+          - 25
         scala-version:
           - '2.12.x'
           - '2.13.x'
@@ -79,7 +80,7 @@ jobs:
     strategy:
       matrix:
         java-version:
-          - 21
+          - 25
         scala-version:
           - '3.x'
     steps:
@@ -136,7 +137,7 @@ jobs:
     strategy:
       matrix:
         java-version:
-          - 21
+          - 25
         scala-version:
           - '2.12.x'
           - '2.13.x'
@@ -200,7 +201,7 @@ jobs:
     strategy:
       matrix:
         java-version:
-          - 21
+          - 25
     if: ${{ github.event_name == 'workflow_dispatch' }}
     steps:
       - uses: garnercorp/build-actions/needs@main
