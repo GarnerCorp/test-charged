@@ -35,7 +35,7 @@ jobs:
 
       - name: Cache Java/SBT
         if: github.event.pull_request.head.repo.full_name == github.event.pull_request.base.repo.full_name
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: |
             ~/.sbt/
@@ -88,7 +88,7 @@ jobs:
 
       - name: Cache Java/SBT
         if: github.event.pull_request.head.repo.full_name == github.event.pull_request.base.repo.full_name
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: |
             ~/.sbt/
@@ -120,7 +120,7 @@ jobs:
           find target/scala-*/*coverage-report -type f | zip /tmp/scoverage.zip -@
 
       - name: Upload coverage report
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: scoverage
           path: /tmp/scoverage.zip
@@ -147,7 +147,7 @@ jobs:
 
       - name: Cache Java/SBT
         if: github.event.pull_request.head.repo.full_name == github.event.pull_request.base.repo.full_name
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: |
             ~/.sbt/
@@ -180,7 +180,7 @@ jobs:
           echo "jar_path=$jar_path" >> $GITHUB_OUTPUT
 
       - name: Upload JAR artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         env:
           JAR_PATH: ${{ steps.find-jar-path.outputs.jar_path }}
           SCALA_VERSION: ${{ matrix.scala-version }}
