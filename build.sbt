@@ -9,8 +9,8 @@ inThisBuild(
     licenses := List(
       "Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")
     ),
-    scalaVersion := "3.8.1",
-    crossScalaVersions := Seq("2.12.21", "2.13.18", "3.8.1"),
+    scalaVersion := "3.8.2",
+    crossScalaVersions := Seq("2.12.21", "2.13.18", "3.8.2"),
     developers := List(
       Developer(
         "vmandrychenko",
