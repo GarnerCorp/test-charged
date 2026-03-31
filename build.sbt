@@ -9,8 +9,8 @@ inThisBuild(
     licenses := List(
       "Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")
     ),
-    scalaVersion := "3.8.1",
-    crossScalaVersions := Seq("2.12.21", "2.13.18", "3.8.1"),
+    scalaVersion := "3.8.2",
+    crossScalaVersions := Seq("2.12.21", "2.13.18", "3.8.2"),
     developers := List(
       Developer(
         "vmandrychenko",
@@ -36,7 +36,7 @@ inThisBuild(
 )
 
 // Dependencies (intentionally spaced to avoid merge conflicts from GitHub auto-bump bots)
-val ScalacticVersion = "3.2.19"
+val ScalacticVersion = "3.2.20"
 
 val ScalaCheckVersion = "1.19.0"
 
