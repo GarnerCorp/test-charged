@@ -7,6 +7,7 @@ name: Scala Steward
 permissions:
   contents: write
   pull-requests: write
+  id-token: write
 
 jobs:
   scala-steward:
@@ -15,6 +16,14 @@ jobs:
     timeout-minutes: 10
     if: github.event_name == 'workflow_dispatch' || vars.RUN_SCALA_STEWARD
     steps:
+      - uses: actions/checkout@v7
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v3
+        with:
+          workload_identity_provider: projects/552057127791/locations/global/workloadIdentityPools/github/providers/github
+          service_account: container-builder@helical-crowbar-220917.iam.gserviceaccount.com
+
       - name: Scala Steward
         uses: scala-steward-org/scala-steward-action@v2.96.0
         with:
