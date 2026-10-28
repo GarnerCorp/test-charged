@@ -25,7 +25,7 @@ jobs:
           service_account: container-builder@helical-crowbar-220917.iam.gserviceaccount.com
 
       - name: Scala Steward
-        uses: scala-steward-org/scala-steward-action@v2.96.0
+        uses: scala-steward-org/scala-steward-action@v2.97.0
         with:
           author-email: jenkins@garnercorp.com
           author-name: GarnerUser
