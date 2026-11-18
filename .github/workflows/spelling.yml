@@ -51,6 +51,9 @@ name: Check Spelling
 #     ... otherwise adjust the `with:` as you wish
 
 on:
+  push:
+    branches:
+      - main
   pull_request_target:
     branches:
       - "**"
@@ -71,7 +74,7 @@ jobs:
     outputs:
       followup: ${{ steps.spelling.outputs.followup }}
     runs-on: ubuntu-latest
-    if: ${{ contains(github.event_name, 'pull_request') }}
+    if: ${{ contains(github.event_name, 'pull_request') || github.event_name == 'push' }}
     concurrency:
       group: spelling-${{ github.event.pull_request.number || github.ref }}
       # note: If you use only_check_changed_files, you do not want cancel-in-progress
